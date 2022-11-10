@@ -143,6 +143,89 @@ p {
 }
 
 
+/* TABLET VERSION (BONUS) */
+/* TABLET VERSION (BONUS) */
+@media (min-width: 800px) {
+    body {
+        padding: 0 8vw;
+    }
+
+    .heroTitle {
+        margin-top: 4vw;
+    }
+
+    .heroTitle h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 16vw;
+    }
+
+    .heroDetails {
+        margin-top: 4vw;
+    }
+
+    .heroDetails p {
+        text-align: center;
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    .heroDetails button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4vw;
+        width: 40vw;
+        height: 12vw;
+        font-size: 3vw;
+    }
+
+    .midSection {
+        margin-top: 8vw;
+    }
+
+    .midContainer {
+        padding: 8vw;
+    }
+
+    .midContainer h3 {
+        font-size: 8vw;
+    }
+
+    .boxLatestNews h2 {
+        font-size: 4.8vw;
+    }
+
+    .boxLatestNews p {
+        font-size: 3.5vw;
+    }
+
+    .botSection {
+        margin-top: 8vw;
+    }
+
+    .boxTopNews {
+        margin-top: 8vw;
+    }
+
+    .topNewsImage img {
+        width: 24vw;
+    }
+
+    .topNewsText h3 {
+        font-size: 8vw;
+    }
+
+    .topNewsText h2 {
+        font-size: 4.8vw;
+    }
+
+    .topNewsText p {
+        font-size: 4vw;
+    }
+}
+
+
 /* DESKTOP DESIGN */
 /* DESKTOP DESIGN */
 @media (min-width: 960px) {

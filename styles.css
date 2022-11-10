@@ -1,3 +1,137 @@
+/* MOBILE FIRST DESIGN */
+/* GLOBAL SETTINGS */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
 html {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* body>* {
+    border: 1px solid black;
+} */
+
+p {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* INDIVIDUAL SETTINGS */
+/* TOP SECTION */
+.topSection>* {
+    margin: 1.2rem 0 0 0;
+}
+
+.heroImage img {
+    width: 100%;
+}
+
+.topSection h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.topSection button {
+    background-color: hsl(5, 85%, 63%);
+    border: 0;
+    width: 12rem;
+    height: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    color: hsl(36, 100%, 99%);
+}
+
+
+/* MID SECTION OR LATEST NEWS */
+.midSection {
+    margin-top: 3rem;
+}
+
+.midContainer {
+    background-color: hsl(240, 100%, 5%);
+    padding: 1.2rem 2rem 1.2rem 1.2rem;
+}
+
+.midContainer * {
+    margin: 0;
+}
+
+.midContainer .boxLatestNews {
+    padding: 2rem 0;
+}
+
+.midContainer h3 {
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+}
+
+.midContainer h2 {
+    color: hsl(36, 100%, 99%);
+    font-size: 1.26rem;
+    font-weight: 700;
+}
+
+.midContainer .boxLatestNews p {
+    margin-top: 1rem;
+}
+
+.midContainer .boxLatestNews:nth-child(3) {
+    border-top: 1px solid hsl(236, 13%, 42%);
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.midContainer .boxLatestNews:nth-child(4) {
+    padding-bottom: 0;
+}
+
+
+/* BOTTOM SECTION OR TOP NEWS */
+.botSection {
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.boxTopNews {
+    display: flex;
+    margin-top: 2rem;
+    /* border: 1px solid black; */
+}
+
+.boxTopNews * {
+    margin: 0;
+}
+
+.topNewsImage img {
+    width: 6.25rem;
+}
+
+.topNewsText>* {
+    margin-top: .8rem;
+    padding-left: 1rem;
+}
+
+.topNewsText h3:first-of-type {
+    margin-top: 0;
+}
+
+.topNewsText h3 {
+    font-size: 1.6rem;
+    color: hsl(233, 8%, 79%);
+}
+
+.topNewsText h2 {
+    font-size: 1.16rem;
+    font-weight: 800;
 }

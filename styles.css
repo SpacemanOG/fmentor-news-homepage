@@ -8,13 +8,13 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 4vw;
 }
 
 p {
     color: hsl(236, 13%, 42%);
     line-height: 1.6;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 /* INDIVIDUAL SETTINGS */
@@ -29,10 +29,6 @@ p {
 
 
 /* TOP SECTION */
-.topSection>* {
-    margin: 1.2rem 0 0 0;
-}
-
 .heroImage {
     margin: 0;
 }
@@ -41,56 +37,73 @@ p {
     width: 100%;
 }
 
-.topSection h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1;
-    margin: 1.6rem 0;
+.heroTitle {
+    margin-top: 6vw;
 }
 
-.topSection button {
+.heroTitle h1 {
+    font-size: 12vw;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+}
+
+.heroDetails {
+    margin-top: 6vw;
+}
+
+.heroDetails p {
+    font-size: 4vw;
+    margin: 0;
+}
+
+.heroDetails button {
     background-color: hsl(5, 85%, 63%);
     border: 0;
-    width: 12rem;
-    height: 3rem;
+    width: 48vw;
+    height: 12vw;
+    font-size: 3vw;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: .3rem;
     color: hsl(36, 100%, 99%);
+    margin-top: 6vw;
 }
 
 
 /* MID SECTION OR LATEST NEWS */
 .midSection {
-    margin-top: 3rem;
+    margin-top: 12vw;
 }
 
 .midContainer {
     background-color: hsl(240, 100%, 5%);
-    padding: 1.2rem 2rem 1.2rem 1.2rem;
+    padding: 7.2vw;
 }
 
 .midContainer * {
     margin: 0;
 }
 
-.midContainer .boxLatestNews {
-    padding: 2rem 0;
+.boxLatestNews {
+    padding: 8.8vw 0;
 }
 
 .midContainer h3 {
     color: hsl(35, 77%, 62%);
-    font-size: 2rem;
+    font-size: 8vw;
 }
 
 .midContainer h2 {
     color: hsl(36, 100%, 99%);
-    font-size: 1.26rem;
+    font-size: 5.2vw;
     font-weight: 700;
 }
 
-.midContainer .boxLatestNews p {
+.boxLatestNews p {
     margin-top: 1rem;
+    color: hsl(233, 8%, 79%);
+    font-size: 4vw;
 }
 
 .midContainer .boxLatestNews:nth-child(3) {
@@ -120,7 +133,7 @@ p {
 }
 
 .topNewsImage img {
-    width: 6.25rem;
+    width: 28vw;
 }
 
 .topNewsText>* {
@@ -133,13 +146,17 @@ p {
 }
 
 .topNewsText h3 {
-    font-size: 2rem;
+    font-size: 8vw;
     color: hsl(233, 8%, 79%);
 }
 
 .topNewsText h2 {
-    font-size: 1.16rem;
+    font-size: 4.8vw;
     font-weight: 800;
+}
+
+.topNewsText p {
+    font-size: 4vw;
 }
 
 
@@ -228,7 +245,7 @@ p {
 
 /* DESKTOP DESIGN */
 /* DESKTOP DESIGN */
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
     body {
         padding: 4vh 12vw;
         overflow: hidden;

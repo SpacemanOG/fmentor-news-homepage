@@ -247,6 +247,26 @@ p {
 /* DESKTOP DESIGN */
 @media (min-width: 1200px) {
 
+    /* TOP NAVIGATION SETTINGS */
+    .navContainer {
+        justify-content: space-between;
+        align-items: center;
+        height: 8vw;
+    }
+
+    .navLinks ul {
+        display: flex;
+        gap: 3.2vw;
+        color: hsl(236, 13%, 42%);
+        font-size: 1.2vw;
+    }
+
+    .navLinks ul li:hover {
+        color: hsl(5, 85%, 63%);
+        cursor: pointer;
+    }
+
+
     /* THIS IS THE HERO SECTION */
     main {
         display: grid;
@@ -307,6 +327,12 @@ p {
         top: 16%;
     }
 
+    .heroDetails button:hover {
+        background-color: hsl(240, 100%, 5%);
+        cursor: pointer;
+        color: hsl(36, 100%, 99%);
+    }
+
     /* THIS IS THE MID SECTION OR LATEST NEWS */
     .midSection {
         grid-area: latest-news;
@@ -327,6 +353,11 @@ p {
 
     .boxLatestNews h2 {
         font-size: 1.6vw;
+    }
+
+    .boxLatestNews h2:hover {
+        color: hsl(35, 77%, 62%);
+        cursor: pointer;
     }
 
     .boxLatestNews p {
@@ -363,6 +394,11 @@ p {
         font-size: 1.4vw;
         padding: 0;
         margin-top: 1vw;
+    }
+
+    .topNewsText h2:hover {
+        color: hsl(5, 85%, 63%);
+        cursor: pointer;
     }
 
     .topNewsText p {

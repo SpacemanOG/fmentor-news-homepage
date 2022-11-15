@@ -16,19 +16,23 @@
 <body>
     <header>
         <!-- THIS IS THE NAVIGATION SECTION -->
-        <nav class="navContainer">
-            <div class="logo">
+        <nav class="navigationSection">
+
+            <div class="navLogo">
                 <img src="./assets/images/logo.svg" alt="logo">
             </div>
-            <div class="navLinks">
-                <ul>
-                    <li>Home</li>
-                    <li>New</li>
-                    <li>Popular</li>
-                    <li>Trending</li>
-                    <li>Categories</li>
-                </ul>
-            </div>
+
+            <button class="mobNavToggleBtn" aria-label="Open and close button for navigation menu"
+                aria-controls="navContainer" aria-expanded="false"></button>
+
+            <ul id="navContainer" data-visible="false" class="navContainer flex">
+                <li>Home</li>
+                <li>New</li>
+                <li>Popular</li>
+                <li>Trending</li>
+                <li>Categories</li>
+            </ul>
+
         </nav>
     </header>
 
@@ -108,8 +112,26 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
+
+    <script>
+        const primaryNav = document.querySelector(".navContainer");
+        const navToggleBtn = document.querySelector(".mobNavToggleBtn");
+
+        navToggleBtn.addEventListener("click", () => {
+            const navVisibility = primaryNav.getAttribute("data-visible");
+            console.log(navVisibility);
+
+            if (navVisibility === "false") {
+                primaryNav.setAttribute("data-visible", "true");
+                navToggleBtn.setAttribute("aria-expanded", "true");
+            } else {
+                primaryNav.setAttribute("data-visible", "false");
+                navToggleBtn.setAttribute("aria-expanded", "false");
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -19,16 +19,82 @@ p {
 
 /* INDIVIDUAL SETTINGS */
 /* TOP NAVIGATION SECTION */
-.navContainer {
-    display: flex;
+.navigationSection {
+    background-color: hsl(36, 100%, 99%);
+    width: 100%;
+    height: 18vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
-.navContainer .navLinks ul {
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.navContainer {
     list-style-type: none;
+    margin: 0;
+    padding: 160px 0 0 40px;
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: hsl(36, 100%, 99%);
+    /* backdrop-filter: blur(1rem); */
+    font-size: x-large;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+}
+
+.navContainer li {
+    padding-bottom: 8vw;
+}
+
+/* .navContainer li:first-child {
+    position: absolute;
+    top: 4rem;
+} */
+
+/* MOBILE NAVIGATION TOGGLE BUTTON SETTINGS */
+.mobNavToggleBtn {
+    z-index: 999;
+    position: absolute;
+    top: 1.75rem;
+    right: 2rem;
+    padding: 0;
+    background-image: url(./assets/images/icon-hamburger.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+/* When navigationContainer is out of Viewport area, data-visible is false. JS can modify the value and turn it to True. When it turns True, CSS can bring the container inside the Viewport using the transform:translate() settings, making it visible! */
+.navContainer[data-visible="true"] {
+    transform: translateX(25%);
+}
+
+.mobNavToggleBtn[aria-expanded="true"] {
+    background-image: url(./assets/images/icon-close.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
 
 
 /* TOP SECTION */
+.navLogo img {
+    padding: 6vw 4vw 4vw 4vw;
+    width: 10%;
+}
+
+.topSection {
+    margin-top: 18vw;
+}
+
 .heroImage {
     margin: 0;
 }
@@ -248,23 +314,46 @@ p {
 @media (min-width: 1200px) {
 
     /* TOP NAVIGATION SETTINGS */
+    .navigationSection {
+        margin: 0 0 0 0;
+        padding: 0;
+        position: relative;
+        background-color: white;
+        z-index: 0;
+        height: 120px;
+        display: flex;   
+        align-items: center;     
+    }
+
+    .mobNavToggleBtn {
+        display: none;
+    }
+
     .navContainer {
-        justify-content: space-between;
-        align-items: center;
-        height: 8vw;
+        margin: 0;
+        padding: 0;
+        transform: translateX(0);
+        position: absolute;
+        background-color: transparent;
     }
 
-    .navLinks ul {
-        display: flex;
-        gap: 2.8vw;
-        color: hsl(236, 13%, 42%);
+    .navContainer li {
+        padding: 0;
         font-size: 1.2vw;
+        color: hsl(236, 13%, 42%);
     }
 
-    .navLinks ul li:hover {
-        color: hsl(5, 85%, 63%);
-        cursor: pointer;
+    .flex {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3vw;
     }
+
+        .navLogo img {
+            padding: 0;
+            width: 4.8vw;
+        }
 
 
     /* THIS IS THE HERO SECTION */
@@ -272,7 +361,7 @@ p {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         /* grid-template-rows: .44fr .44fr 1fr; */
-        grid-template-rows: 1fr 1fr 240px;
+        grid-template-rows: 1fr 1fr 200px;
         gap: 2vw;
         grid-template-areas:
             "hero-section hero-section latest-news"
@@ -289,6 +378,7 @@ p {
             "hero-image hero-image"
             "hero-title hero-details";
         grid-area: hero-section;
+        margin: 0;
     }
 
     .heroImage {

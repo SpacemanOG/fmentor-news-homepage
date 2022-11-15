@@ -62,8 +62,9 @@ p {
 .mobNavToggleBtn {
     z-index: 999;
     position: absolute;
-    top: 1.75rem;
-    right: 2rem;
+    /* top: 1.75rem; */
+    top: 6vw;
+    right: 4vw;
     padding: 0;
     background-image: url(./assets/images/icon-hamburger.svg);
     background-color: transparent;
@@ -233,6 +234,10 @@ p {
         padding: 0 8vw;
     }
 
+    .mobNavToggleBtn {
+        right: 8vw;
+    }
+
     .heroTitle {
         margin-top: 4vw;
     }
@@ -321,8 +326,8 @@ p {
         background-color: white;
         z-index: 0;
         height: 120px;
-        display: flex;   
-        align-items: center;     
+        display: flex;
+        align-items: center;
     }
 
     .mobNavToggleBtn {
@@ -343,6 +348,11 @@ p {
         color: hsl(236, 13%, 42%);
     }
 
+    .navContainer li:hover {
+        color: hsl(5, 85%, 63%);
+        cursor: pointer;
+    }
+
     .flex {
         flex-direction: row;
         justify-content: flex-end;
@@ -350,10 +360,10 @@ p {
         gap: 3vw;
     }
 
-        .navLogo img {
-            padding: 0;
-            width: 4.8vw;
-        }
+    .navLogo img {
+        padding: 0;
+        width: 4.8vw;
+    }
 
 
     /* THIS IS THE HERO SECTION */
